@@ -93,29 +93,31 @@ const AccordionItem = ({
       transition={{ duration: 0.2, delay: index * 0.1 }}
       whileHover={{ y: !isOpen ? -15 : 0 }}
       whileTap={{ scale: 0.95 }}
-      className="accordion-item"
+      className="accordion-item h-[95vw] md:h-[95vh]"
       style={{ backgroundColor: color }}
     >
       <motion.div
         initial={false}
         transition={{ duration: 0.6 }}
-        className="accordion-header"
+        className="accordion-header "
         onClick={handleClick}
       >
-        <div className="accordion-header-logo">
-          {client === 'OPPO' ? (
-            <Image src={oppo} alt="oppo logo" className="accordion-oppo" />
-          ) : client === 'HYUNDAI' ? (
-            <Image src={hyundai} alt="hyundai logo" className="accordion-hyundai" />
-          ) : client === 'REDBULL' ? (
-            <Image src={redbull} alt="redbull logo" className="accordion-redbull" />
-          ) : null}
+        <div className="-rotate-90 md:rotate-0">
+          <div className="accordion-header-logo">
+            {client === 'OPPO' ? (
+              <Image src={oppo} alt="oppo logo" className="accordion-oppo" />
+            ) : client === 'HYUNDAI' ? (
+              <Image src={hyundai} alt="hyundai logo" className="accordion-hyundai" />
+            ) : client === 'REDBULL' ? (
+              <Image src={redbull} alt="redbull logo" className="accordion-redbull" />
+            ) : null}
+          </div>
+          <motion.div className="accordion-year">{year}</motion.div>
         </div>
-        <motion.div className="accordion-year">{year}</motion.div>
-        <motion.div className={`${anton.className} accordion-title`}>{title}</motion.div>
+        <motion.div className={`${anton.className} accordion-title fixed md:static bottom-10`}>{title}</motion.div>
         <div className="accordion-footer">
-          <Image src={logo} alt="2d Production logo" className="accordion-logo" />
-          <Image src={hq} alt="HQ logo" className="accordion-hq" />
+          <Image src={logo} alt="2d Production logo" className="accordion-logo opacity-20 md:opacity-100" />
+          <Image src={hq} alt="HQ logo" className="accordion-hq hidden md:block" />
         </div>
       </motion.div>
       <AnimatePresence>
@@ -152,7 +154,7 @@ const App = () => {
         setIsInView(true);
         return {};
       }}
-      className="my-[80px]"
+        className="my-[80px] rotate-90 md:rotate-0"
     >
     <motion.div
       initial={{ x: '95vw' }}
