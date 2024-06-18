@@ -38,7 +38,7 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
-          zIndex: 90,
+          zIndex: 20,
       }}
       className="draggable cursor-grab active:cursor-grabbing"
       onMouseEnter={() => setIsHovered(true)}
@@ -137,7 +137,7 @@ const App = () => {
 
   return (
       <div className="w-full h-full relative flex flex-col items-center justify-start pt-24">
-  <h1 className={`drop-shadow-md select-none pointer-events-none text-[144px] z-100 mb-8 uppercase ${anton.className}`} >Team Behind</h1>
+  <h1 className={`drop-shadow-md select-none pointer-events-none text-[144px] z-50 mb-8 uppercase ${anton.className}`} >Team Behind</h1>
     {polaroidData.polaroidCards.map((card, index) => (
       <PolaroidCard
         key={index}

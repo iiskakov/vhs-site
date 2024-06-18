@@ -116,7 +116,7 @@ const AccordionItem = ({
         </div>
         <motion.div className={`${anton.className} accordion-title fixed md:static bottom-10`}>{title}</motion.div>
         <div className="accordion-footer">
-          <Image src={logo} alt="2d Production logo" className="accordion-logo opacity-20 md:opacity-100" />
+          <Image src={logo} alt="2d Production logo" className="scale-150 md:scale-100 accordion-logo opacity-20 md:opacity-100" />
           <Image src={hq} alt="HQ logo" className="accordion-hq hidden md:block" />
         </div>
       </motion.div>

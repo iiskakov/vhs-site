@@ -47,7 +47,7 @@ const [firstPart, secondPart] = splitProjectName(project_name);
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className={`${orbitron.className} text-center text-black font-extrabold uppercase text-[15px]`}
+          className={`${orbitron.className} min-h-[50px] text-center text-black font-extrabold uppercase text-[15px]`}
         >
           {director}
         </motion.div>
