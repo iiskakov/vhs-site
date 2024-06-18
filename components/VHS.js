@@ -154,7 +154,7 @@ const App = () => {
         setIsInView(true);
         return {};
       }}
-        className="my-[80px] rotate-90 md:rotate-0"
+        className="my-[80px] rotate-90 md:rotate-0 overflow-hidden"
     >
     <motion.div
       initial={{ x: '95vw' }}
