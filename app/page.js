@@ -21,7 +21,7 @@ export default async function Home() {
       </Suspense>
       <VHS />
       {/* <About /> */}
-      {/* <Polaroid /> */}
+      <Polaroid />
       {/* <Footer /> */}
         </div>
   );
