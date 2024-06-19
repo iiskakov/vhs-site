@@ -4,7 +4,7 @@ import { lato } from '@/app/fonts';
 
 const Footer = () => {
     return (
-<div className="flex justify-between items-center text-white m-8">
+<div id="contact" className="flex justify-between items-center text-white m-8">
   <div className="flex flex-col justify-between h-[170px] items-start w-[170px]">
     <img src="/2d-logo.svg" alt="Logo" className="h-[80px] w-auto" />
     <span className={`${lato.className} text-[14px]`} >2D PRODUCTION <span className="opacity-30">© 2024</span></span>

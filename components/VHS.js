@@ -164,6 +164,7 @@ const App = () => {
         setIsInView(true);
         return {};
       }}
+        id="works"
         className="my-[80px]  rotate-90 md:rotate-0 overflow-hidden"
     >
     <motion.div
