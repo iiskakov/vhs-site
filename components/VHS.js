@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { anton } from '@/app/fonts'
 
@@ -72,6 +72,8 @@ const accordionData = [
 
 const AccordionItem = ({
   title,
+  isOpen,
+  onClick,
   year,
   color,
   client,
@@ -79,18 +81,12 @@ const AccordionItem = ({
   index,
   isInView,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <motion.div
       initial={{ rotate: 15 }}
       animate={isInView && {rotate: 0}}
-      transition={{ duration: 0.2, delay: index * 0.1 }}
+      transition={{ duration: 0.2, delay: 1 + (index * 0.1) }}
       whileHover={{ y: !isOpen ? -15 : 0 }}
       whileTap={{ scale: 0.95 }}
       className="accordion-item h-[95vw] md:h-[95vh]"
@@ -100,7 +96,7 @@ const AccordionItem = ({
         initial={false}
         transition={{ duration: 0.6 }}
         className="accordion-header "
-        onClick={handleClick}
+        onClick={onClick}
       >
         <div className="-rotate-90 md:rotate-0">
           <div className="accordion-header-logo">
@@ -121,6 +117,7 @@ const AccordionItem = ({
         </div>
       </motion.div>
       <AnimatePresence>
+        
         {isOpen && (
           <motion.div
             transition={{ duration: 0.4 }}
@@ -146,6 +143,19 @@ const AccordionItem = ({
 
 const App = () => {
   const [isInView, setIsInView] = useState(false);
+  const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => {
+        setOpenIndex(2);
+      }, 2000);
+
+      // Cleanup timer on component unmount
+      return () => clearTimeout(timer);
+    }
+  }, [isInView]);
+
 
   return (
       <motion.div
@@ -154,18 +164,20 @@ const App = () => {
         setIsInView(true);
         return {};
       }}
-        className="my-[80px] rotate-90 md:rotate-0 overflow-hidden"
+        className="my-[80px]  rotate-90 md:rotate-0 overflow-hidden"
     >
     <motion.div
       initial={{ x: '95vw' }}
       whileInView={{ x: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }} >
+    transition={{ duration: 0.5, delay: 1 }} >
       <div className="accordion-container">
         {accordionData.map((item, index) => (
           <AccordionItem
             key={index}
             {...item}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            isOpen={openIndex === index}
             index={index}
             isInView={isInView}
           />
