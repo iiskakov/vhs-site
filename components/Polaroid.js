@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { anton } from '@/app/fonts';
+import { marker } from '@/app/fonts';
 
 
 
@@ -23,7 +24,7 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
     <motion.div
       drag
       dragConstraints={dragConstraints}
-      whileDrag={{ scale: 1.05 }}
+      whileDrag={{ scale: 1.2 }}
       whileHover={{ rotate: initial.rotate + 3 }}
       initial={initial}
       dragMomentum={false}
@@ -69,7 +70,7 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
           muted
         />
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/e/e8/Dumbledore_-_Prisoner_of_Azkaban.jpg"
+          src={imageSrc}
           style={{
             position: "absolute",
             top: 0,
@@ -83,12 +84,13 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
           alt={name}
         />
       </div>
-      <h1 style={{
-        fontFamily: "'Permanent Marker', cursive",
+      <h1
+        className={`${marker.className}`}
+        style={{
         fontSize: "18px",
         textAlign: "center",
         marginTop: "5px",
-        /* background: `url(${marker.src})`, */
+        background: `url(${"https://storage.yandexcloud.kz/qarabucket/marker_texture.jpg"})`,
         WebkitBackgroundClip: "text",
         backgroundClip: "text",
         color: "transparent"
@@ -101,32 +103,53 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
 const polaroidData = {
   polaroidCards: [
     {
-      imageSrc: "https://upload.wikimedia.org/wikipedia/en/e/e8/Dumbledore_-_Prisoner_of_Azkaban.jpg",
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/yerkebulan.png",
       name: "Yerkebulan",
       title: "General Producer",
       initial: { x: 100, y: 200, rotate: -2 },
       videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
     },
     {
-      imageSrc: "https://upload.wikimedia.org/wikipedia/en/e/e8/Dumbledore_-_Prisoner_of_Azkaban.jpg",
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/sardor.png",
       videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
       name: "Sardor",
       title: "Director of Photography",
       initial: { x: 200, y: -120, rotate: 5 }
     },
     {
-      imageSrc: "https://upload.wikimedia.org/wikipedia/en/e/e8/Dumbledore_-_Prisoner_of_Azkaban.jpg",
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/zhandos.png",
       videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
       name: "Zhandos",
       title: "Director",
       initial: { x: 400, y: -260, rotate: 2 }
     },
     {
-      imageSrc: "https://upload.wikimedia.org/wikipedia/en/e/e8/Dumbledore_-_Prisoner_of_Azkaban.jpg",
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/milana.png",
       videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
       name: "Milana",
       title: "Chief Marketing Officer",
       initial: { x: 130, y: -900, rotate: -5 }
+    },
+    {
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/aisultan.png",
+      videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
+      name: "Aisultan",
+      title: "Director",
+      initial: { x: 230, y: -500, rotate: -9 }
+    },
+    {
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/kamilla.png",
+      videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
+      name: "Kamilla",
+      title: "Project Manager",
+      initial: { x: 30, y: -800, rotate: 14 }
+    },
+    {
+      imageSrc: "https://storage.yandexcloud.kz/qarabucket/team/ratmir.png",
+      videoSrc: 'https://www.w3schools.com/html/mov_bbb.webm',
+      name: "Ratmir",
+      title: "Commercial Director",
+      initial: { x: 90, y: -1200, rotate: 4 }
     }
   ]
 };
