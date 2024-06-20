@@ -158,6 +158,7 @@ const App = () => {
 
 
   return (
+    <section className="h-screen">
       <motion.div
       whileInView={() => {
         // when element in viewport , set IsInView true!
@@ -186,6 +187,7 @@ const App = () => {
       </div>
     </motion.div>
     </motion.div>
+    </section>
   );
 };
 

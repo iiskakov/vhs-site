@@ -28,29 +28,29 @@ const MobileText = () => {
       viewport={{ once: true }}
       variants={textContainerVariants}
       style={{ overflow: "hidden" }}
-      className={`${anton.className} md:hidden text-3xl  uppercase text-justify`}
+      className={`${anton.className} md:hidden text-[56px]  uppercase text-justify`}
     >
-      <div  style={{ overflow: "hidden", height: "1.1em", marginBottom: '0.3em' }}>
+      <div  style={{ overflow: "hidden", height: "1.2em", marginBottom: '0.1em' }}>
         <motion.div variants={textVariants}>
            we are <span style={{ color: '#FFC634' }}>a team</span> of
         </motion.div>
       </div>
-      <div  style={{ overflow: "hidden", height: "1.1em", marginBottom: '0.3em' }}>
+      <div  style={{ overflow: "hidden", height: "1.2em", marginBottom: '0.1em' }}>
         <motion.div variants={textVariants}>
             enthusiasts who
         </motion.div>
       </div>
-      <div style={{ overflow: "hidden", height: "1.1em", marginBottom: '0.3em' }}>
+      <div style={{ overflow: "hidden", height: "1.2em", marginBottom: '0.1em' }}>
         <motion.div variants={textVariants}>
           have <span style={{ color: '#FD511C' }}>one big idea </span>
         </motion.div>
       </div>
-      <div style={{ overflow: "hidden", height: "1.1em", marginBottom: '0.3em' }}>
+      <div style={{ overflow: "hidden", height: "1.2em", marginBottom: '0.1em' }}>
         <motion.div variants={textVariants}>
         —  to create high
         </motion.div>
       </div>
-      <div style={{ overflow: "hidden", height: "1.1em", marginBottom: '0.3em' }}>
+      <div style={{ overflow: "hidden", height: "1.2em", marginBottom: '0.1em' }}>
         <motion.div variants={textVariants}>
          <span style={{ color: '#F1015D' }}>impact projects</span>
         </motion.div>

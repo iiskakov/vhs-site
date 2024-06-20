@@ -273,11 +273,11 @@ const polaroidData = {
 
 
 
-const App = () => {
+const Polaroid = () => {
 
   return (
-      <div className="w-full h-full relative flex flex-col items-center justify-start pt-24">
-  <h1 className={`drop-shadow-md select-none pointer-events-none text-[144px] z-50 mb-8 uppercase ${anton.className}`} >Team Behind</h1>
+      <div className="w-full h-screen relative flex flex-col items-center justify-start pt-24">
+        <h1 className={`drop-shadow-sm md:drop-shadow-md select-none pointer-events-none text-[56px] md:text-[144px] z-50 mb-8 uppercase ${anton.className}`} >Team Behind</h1>
     {polaroidData.polaroidCards.map((card, index) => (
       <PolaroidCard
         key={index}
@@ -293,4 +293,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Polaroid;

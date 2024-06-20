@@ -26,7 +26,7 @@ const [firstPart, secondPart] = splitProjectName(project_name);
 
 
   return (
-    <motion.div className="absolute right-0 top-0 h-full z-20 flex flex-col items-center justify-between">
+    <motion.div className=" hidden md:flex absolute right-0 top-0 h-full z-20  flex-col items-center justify-between">
       <img
         src="/spline.svg"
         alt="Spline"
