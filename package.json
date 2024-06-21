@@ -17,6 +17,7 @@
     "next-video": "^1.1.0",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
+    "react-player": "3.0.0-canary.0",
     "swr": "^2.2.5"
   },
   "devDependencies": {
