@@ -8,7 +8,7 @@ import Nav from '@/components/Intro/Nav'
 import Logo from '@/components/Intro/Logo'
 
 
-export const allProjects = [
+const allProjects = [
   {
     id: 1,
     title: "ALTERNATIVA FILM PROJECT BY INDRIVE",
