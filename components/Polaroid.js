@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useMotionValue } from 'framer-motion';
 
+import Image from 'next/image';
 import { anton } from '@/app/fonts';
 import { marker } from '@/app/fonts';
 
@@ -88,14 +89,14 @@ const PolaroidCard2 = ({ imageSrc, videoSrc, name, title, dragConstraints, initi
           loop
           muted
         />
-        <img
+        <Image
           src={imageSrc}
+          width={264}
+          height={264}
           style={{
             position: "absolute",
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
             pointerEvents: "none",
             display: isHovered ? 'none' : 'block'
@@ -187,14 +188,14 @@ const PolaroidCard = ({ imageSrc, videoSrc, name, title, dragConstraints, initia
           loop
           muted
         />
-        <img
+        <Image
+          width={264}
+          height={264}
           src={imageSrc}
           style={{
             position: "absolute",
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100%",
             objectFit: "cover",
             pointerEvents: "none",
             display: isHovered ? 'none' : 'block'
