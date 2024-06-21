@@ -5,7 +5,7 @@ import Link from 'next/link';
 import VideoPlayer from '@/components/Projects/VideoPlayer'
 
 
-export const allProjects = [
+const allProjects = [
   {
     id: 1,
     title: "ALTERNATIVA FILM PROJECT BY INDRIVE",
