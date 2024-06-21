@@ -8,6 +8,7 @@ import { anton } from '@/app/fonts';
 
 import Logo from '@/components/Intro/Logo'
 import Nav from '@/components/Intro/Nav'
+import SeeMore from '@/components/Intro/SeeMore'
 import Spline from '@/components/Intro/Spline'
 import Videos from '@/components/Intro/Videos'
 import VideoSwitcher from '@/components/Intro/VideoSwitcher'
@@ -30,12 +31,8 @@ const Intro = (data) => {
       <Videos videos={data.data.data} activeVideo={activeVideo} />
       <VideoSwitcher videos={data.data.data} activeVideo={activeVideo} setActiveVideo={setActiveVideo}/>
       <Spline project_name={data.data.data[activeVideo - 1]?.project_name} director={data.data.data[activeVideo - 1]?.director} label={data.data.data[activeVideo - 1]?.label} />
-      <button className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 z-50">
-        <img
-        src="/seemore.svg"
-        alt="see more button"
-        />
-      </button>
+      <SeeMore project_name={data.data.data[activeVideo - 1]?.project_name} />
+
     </div>
   );
 }
