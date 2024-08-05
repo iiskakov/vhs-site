@@ -9,12 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@payloadcms/db-postgres": "^3.0.0-beta.71",
+    "@payloadcms/next": "^3.0.0-beta.71",
+    "@payloadcms/plugin-cloud": "^3.0.0-beta.71",
+    "@payloadcms/richtext-lexical": "^3.0.0-beta.71",
     "@supabase/supabase-js": "^2.43.4",
     "[200~": "supabase/ssr",
     "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
     "framer-motion": "12.0.0-alpha.0",
+    "graphql": "^16.8.1",
     "next": "15.0.0-rc.0",
     "next-video": "^1.1.0",
+    "payload": "^3.0.0-beta.71",
     "react": "19.0.0-rc-f994737d14-20240522",
     "react-dom": "19.0.0-rc-f994737d14-20240522",
     "react-player": "3.0.0-canary.0",
