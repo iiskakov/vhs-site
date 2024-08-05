@@ -14,7 +14,7 @@
     "@payloadcms/plugin-cloud": "^3.0.0-beta.71",
     "@payloadcms/richtext-lexical": "^3.0.0-beta.71",
     "@supabase/supabase-js": "^2.43.4",
-    "[200~": "supabase/ssr",
+    "@supabase/ssr": "latest",
     "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
     "framer-motion": "12.0.0-alpha.0",
     "graphql": "^16.8.1",
